@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     "wagtail.admin",
     # Custom
     "user.apps.UserConfig",
-
+    "crispy_forms",
     # below are everything all-auth
     'allauth',
     'allauth.account',
@@ -206,3 +206,6 @@ TAGGIT_CASE_INSENSITIVE = True
 # Sets default for primary key IDs
 # See https://docs.djangoproject.com/en/4.0/ref/models/fields/#bigautofield
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Crispy_forms
+CRISPY_TEMPLATE_PACK = 'bootstrap5'     # for the css of crispy forms

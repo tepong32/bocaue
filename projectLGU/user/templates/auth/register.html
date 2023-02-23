@@ -1,5 +1,4 @@
-{% extends 'home/index.html' %}
-{% load crispy_forms_tags %}
+{% extends "coderedcms/pages/base.html" %}
 
 
 {% block content %}
@@ -16,10 +15,10 @@
             <!-- /.card-header -->
             <!-- form start -->
             <form method="POST">
-              <div class="card-body bg-dark">
+              <div class="card-body">
                 {% csrf_token %}
                 <fieldset class="form-group">
-                  {{ form|crispy }}
+                  {{ form }}
                 </fieldset>
                 <button type="submit" class="btn btn-primary">Sign up</button>
                 <div class="border-top pt-3">
