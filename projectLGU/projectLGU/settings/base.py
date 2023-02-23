@@ -51,6 +51,17 @@ INSTALLED_APPS = [
     "wagtail.admin",
     # Custom
     "user.apps.UserConfig",
+
+    # below are everything all-auth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # ... include the providers you want to allauth to enable:
+    # 'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    # 'allauth.socialaccount.providers.twitter',
+    # add more if you wish to
+
     # Django
     "django.contrib.admin",
     "django.contrib.auth",
@@ -60,6 +71,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sitemaps",
 ]
+
+# django-allauth needs this
+SITE_ID = 1
 
 MIDDLEWARE = [
     # Save pages to cache. Must be FIRST.
