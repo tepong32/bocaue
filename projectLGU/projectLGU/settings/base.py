@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     "wagtail.contrib.modeladmin",
     "wagtail.contrib.table_block",
     "wagtail.admin",
+    # Custom
+    "user.apps.UserConfig",
     # Django
     "django.contrib.admin",
     "django.contrib.auth",

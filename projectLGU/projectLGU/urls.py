@@ -5,6 +5,7 @@ from wagtail.documents import urls as wagtaildocs_urls
 from coderedcms import admin_urls as crx_admin_urls
 from coderedcms import search_urls as crx_search_urls
 from coderedcms import urls as crx_urls
+from user import urls as user_urls
 
 urlpatterns = [
     # Admin
@@ -14,6 +15,8 @@ urlpatterns = [
     path("docs/", include(wagtaildocs_urls)),
     # Search
     path("search/", include(crx_search_urls)),
+    # User ####### custom-added by teppy
+    path("user/", include(user_urls)),
     # For anything not caught by a more specific rule above, hand over to
     # the page serving mechanism. This should be the last pattern in
     # the list:
