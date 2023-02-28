@@ -36,3 +36,14 @@ Open this directory in a command prompt, then:
 
 Made with ♥ using [Wagtail](https://wagtail.io/) +
 [CodeRed Extensions](https://www.coderedcorp.com/cms/)
+
+---------------------------------------------------------
+Mods by teppy:
+I am planning for this app to have separate views.
+CRX will be the main/default view and be used for the CMS function of the app.
+There will also be the integration of a social-media-like feature that will be hosted on the same domain but will present a visuals and feels separate from the CMS.
+
+2/28/23:
+The User app is already working but needs to be re-worked. Models need further scrutiny as to what attributes will be added and/or removed.
+Will also need to have a separate "base" page with a separate navbar and footer for its containerized features focused on the SocMed.
+Still trying to generate more ideas and come-up with ways on how to have them implemented thru code.
