@@ -212,4 +212,4 @@ BS_ICONS_BASE_URL = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/'
 BS_ICONS_CUSTOM_PATH = 'custom-icons'
 MD_ICONS_BASE_URL = 'https://cdn.jsdelivr.net/npm/@mdi/svg@7.0.96/'
 BS_ICONS_CACHE = os.path.join(STATIC_ROOT, 'icon_cache')
-BS_ICONS_NOT_FOUND = f"Icon <{icon_path}> does not exist"
+BS_ICONS_NOT_FOUND = f"Icon <custom-icons> does not exist"

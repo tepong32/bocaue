@@ -5,12 +5,13 @@
 <!-- Users' Profile page -->
 
 {% block content %}
-  <div class="container" style="padding-top: 5em;"> {% comment %}	create own CSS {% endcomment %}
+  <div class="container" style="padding-top: 5em;"> {% comment %}	!!! create own CSS for the user page {% endcomment %}
     <div class="row">
         <!-- Profile Image -->
         <div class="card card-primary card-outline col-md-4">
           <div class="card-body box-profile">
             {% if messages %}
+              {% comment %} Here's where info such as "account updated" notifs appear. {% endcomment %}
               {% for message in messages %}
                 <div class="alert alert-{{ message.tags }}">{{ message }}</div>
               {% endfor %}
@@ -24,6 +25,7 @@
             <h2 class="profile-username text-center">{{user.username}}
 
             {% if user.username == request.user.username %}
+              {% comment %} If the the viewer is the account owner, show the "edit profile" link. {% endcomment %}
               <small>
                 <a title="Edit profile" href="{% url 'profile-edit' user.username %}">{% md_icon 'pencil' %}</a>
               </small>
