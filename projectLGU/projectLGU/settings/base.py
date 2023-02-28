@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     "wagtail.admin",
     # Custom
     "user.apps.UserConfig",
-    "crispy_forms",
+    "django_bootstrap_icons",
     # below are everything all-auth
     'allauth',
     'allauth.account',
@@ -207,5 +207,9 @@ TAGGIT_CASE_INSENSITIVE = True
 # See https://docs.djangoproject.com/en/4.0/ref/models/fields/#bigautofield
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Crispy_forms
-CRISPY_TEMPLATE_PACK = 'bootstrap5'     # for the css of crispy forms
+# Django-bootstrap-icons
+BS_ICONS_BASE_URL = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/'
+BS_ICONS_CUSTOM_PATH = 'custom-icons'
+MD_ICONS_BASE_URL = 'https://cdn.jsdelivr.net/npm/@mdi/svg@7.0.96/'
+BS_ICONS_CACHE = os.path.join(STATIC_ROOT, 'icon_cache')
+BS_ICONS_NOT_FOUND = f"Icon <{icon_path}> does not exist"
