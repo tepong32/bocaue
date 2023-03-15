@@ -22,6 +22,7 @@ django-permissionedforms==0.1
 django-sendmail-backend==0.1.2
 django-taggit==2.1.0
 django-treebeard==4.6.1
+django_debug_toolbar==3.8.1
 djangorestframework==3.14.0
 draftjs-exporter==2.1.7
 et-xmlfile==1.1.0

@@ -27,6 +27,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 INSTALLED_APPS = [
     # This project
     "website",
+
     # Wagtail CRX (CodeRed Extensions)
     "coderedcms",
     "django_bootstrap5",
@@ -34,6 +35,7 @@ INSTALLED_APPS = [
     "taggit",
     "wagtailcache",
     "wagtailseo",
+
     # Wagtail
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
@@ -49,9 +51,11 @@ INSTALLED_APPS = [
     "wagtail.contrib.modeladmin",
     "wagtail.contrib.table_block",
     "wagtail.admin",
+
     # Custom
     "user.apps.UserConfig",
     "django_bootstrap_icons",
+    
     # below are everything all-auth
     'allauth',
     'allauth.account',
@@ -153,7 +157,7 @@ LANGUAGE_CODE = "en-us"
 
 LANGUAGES = [("en-us", _("English"))]
 
-TIME_ZONE = "America/New_York"
+TIME_ZONE = "America/New_York" # change this!
 
 USE_I18N = True
 
@@ -200,7 +204,7 @@ WAGTAILADMIN_BASE_URL = "http://localhost"
 
 # Tags
 
-TAGGIT_CASE_INSENSITIVE = True
+TAGGIT_CASE_INSENSITIVE = False
 
 
 # Sets default for primary key IDs
