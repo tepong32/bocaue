@@ -1,0 +1,17 @@
+first_name
+last_name
+profile_type_choices [
+	(ChooseOne, "choose one)"),
+	(Service_Provider_u2me, "Service Provider (fixed loc)"),
+	(Service_Provider_me2u, "Service Provider (home service)"),
+	(Entrepreneur_Wholesaler, "Entrepreneur (Wholesaler)"),
+	(Entrepreneur_Retailer, "Entrepreneur (Retailer)"),
+	(Entrepreneur_Custom, "Entrepreneur (Made to Orders)"),
+]
+profile_type = models.CharField(
+	verbose_name="Profile Type",
+	max_length=50,
+	choices=profile_type_choices,
+	default=ChooseOne,
+)
+public_contact_no = models.
