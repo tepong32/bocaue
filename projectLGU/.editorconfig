@@ -24,3 +24,8 @@ indent_size = 4
 [*.{css,sass,scss,html,js,json,ts,yml}]
 indent_style = space
 indent_size = 2
+
+
+# see https://github.com/sindresorhus/editorconfig-sublime#readme, bottom-most part
+"draw_white_space": "all"
+"trim_trailing_white_space_on_save": true

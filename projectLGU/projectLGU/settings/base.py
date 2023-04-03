@@ -74,10 +74,28 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sitemaps",
+
+    # Django AdminLTE3
+    'adminlte3',
+    'adminlte3_theme',
 ]
 
 # django-allauth needs this
 SITE_ID = 1
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            # try to know why the values cannot be passed as env variables...they're just not working.
+            'client_id': '960711795493-9vsgskaeg1qk3nc74qp27s9e7uoejitq.apps.googleusercontent.com', # os.environ.get('GAUTH_CLIENTID'), #
+            'secret': '0-tHwlg4jvax1jt7p-JnvBmj', # os.environ.get('GAUTH_SECRET'),      # 
+            'key': ''
+        }
+    }
+}
+
 
 MIDDLEWARE = [
     # Save pages to cache. Must be FIRST.
@@ -217,3 +235,20 @@ BS_ICONS_CUSTOM_PATH = 'custom-icons'
 MD_ICONS_BASE_URL = 'https://cdn.jsdelivr.net/npm/@mdi/svg@7.0.96/'
 BS_ICONS_CACHE = os.path.join(STATIC_ROOT, 'icon_cache')
 BS_ICONS_NOT_FOUND = f"Icon <custom-icons> does not exist"
+
+
+
+########################################################################################## recall how to use these
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' # or only your domain name if you have your own mail server
+EMAIL_PORT = 587 #587
+EMAIL_USE_TLS = True
+
+
+# TO USE THESE VARIABLES BELOW, USE ENVIRONMENT VARIABLES TO HIDE SENSITIVE INFO
+# CHECK CoreyMs' Django TUTORIAL # 12 -- 14:20
+
+EMAIL_HOST_USER = os.environ.get('ADMIN_EMAIL_UN') # var for email username
+EMAIL_HOST_PASSWORD = os.environ.get('ADMIN_EMAIL_PW') # var for email pw
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER # for email-sending pw-reset requests
