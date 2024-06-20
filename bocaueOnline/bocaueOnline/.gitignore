@@ -395,7 +395,7 @@ cache/
 /protected/
 
 # Media files
-# /media/
+/media/
 
 # Collected static files
 /static/
